@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextArea?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="478.0" maxWidth="872.0" minHeight="478.0" minWidth="872.0" prefHeight="478.0" prefWidth="872.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.flora_kutuphane.AdminPaneliController">
+    <children>
+        <TabPane maxHeight="478.0" maxWidth="872.0" minHeight="478.0" minWidth="872.0" style="-fx-background-color: Snow;" tabClosingPolicy="UNAVAILABLE">
+            <tabs>
+                <Tab text="Kitaplar">
+                    <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-background-color: snow;">
+                            <children>
+                                <Pane layoutX="468.0" layoutY="60.0" prefHeight="368.0" prefWidth="403.0">
+                                    <children>
+                                        <JFXButton layoutX="257.0" layoutY="323.0" onAction="#kitapDuzenleEvent" prefHeight="31.0" prefWidth="118.0" style="-fx-background-color: #4B0082;" text="Düzenle" textFill="WHITE">
+                                            <font>
+                                                <Font name="Gabriola" size="18.0" />
+                                            </font></JFXButton>
+                                        <JFXButton layoutX="117.0" layoutY="323.0" onAction="#kitapSilEvent" prefHeight="31.0" prefWidth="118.0" style="-fx-background-color: #4B0082;" text="Sil" textFill="WHITE">
+                                            <font>
+                                                <Font name="Gabriola" size="18.0" />
+                                            </font></JFXButton>
+                                        <ScrollPane layoutX="-4.0" prefHeight="295.0" prefWidth="401.0">
+                                            <content>
+                                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="560.0" prefWidth="402.0" style="-fx-background-color: Snow;">
+                                                    <children>
+                                                        <JFXTextArea fx:id="kitapAdiText" layoutX="140.0" layoutY="13.0" prefHeight="19.0" prefWidth="246.0" />
+                                                        <JFXTextArea fx:id="stokDurumuText" focusColor="INDIGO" layoutX="140.0" layoutY="445.0" prefHeight="19.0" prefWidth="246.0" />
+                                                        <JFXTextArea fx:id="kitapTuruText" focusColor="INDIGO" layoutX="141.0" layoutY="62.0" prefHeight="19.0" prefWidth="246.0" />
+                                                        <JFXTextArea fx:id="yazarText" focusColor="INDIGO" layoutX="141.0" layoutY="110.0" prefHeight="19.0" prefWidth="246.0" />
+                                                        <JFXTextArea fx:id="yayineviText" focusColor="INDIGO" layoutX="141.0" layoutY="158.0" prefHeight="19.0" prefWidth="246.0" />
+                                                        <JFXTextArea fx:id="yilText" focusColor="INDIGO" layoutX="141.0" layoutY="206.0" prefHeight="19.0" prefWidth="246.0" />
+                                                        <JFXTextArea fx:id="rafNumarasiText" focusColor="INDIGO" layoutX="141.0" layoutY="254.0" prefHeight="19.0" prefWidth="246.0" />
+                                                        <TextField fx:id="konuText" layoutX="141.0" layoutY="310.0" prefHeight="114.0" prefWidth="246.0" />
+                                                        <Label layoutX="15.0" layoutY="14.0" prefHeight="35.0" prefWidth="102.0" text="Kitap Adı">
+                                                            <font>
+                                                                <Font name="Gabriola" size="18.0" />
+                                                            </font>
+                                                        </Label>
+                                                        <Label layoutX="15.0" layoutY="80.0" text="Kitap Türü">
+                                                            <font>
+                                                                <Font name="Gabriola" size="18.0" />
+                                                            </font>
+                                                        </Label>
+                                                        <Label layoutX="15.0" layoutY="128.0" prefHeight="18.0" prefWidth="49.0" text="Yazar">
+                                                            <font>
+                                                                <Font name="Gabriola" size="18.0" />
+                                                            </font>
+                                                        </Label>
+                                                        <Label layoutX="15.0" layoutY="176.0" text="Yayinevi">
+                                                            <font>
+                                                                <Font name="Gabriola" size="18.0" />
+                                                            </font>
+                                                        </Label>
+                                                        <Label layoutX="15.0" layoutY="224.0" prefHeight="23.0" prefWidth="24.0" text="Yıl">
+                                                            <font>
+                                                                <Font name="Gabriola" size="18.0" />
+                                                            </font>
+                                                        </Label>
+                                                        <Label layoutX="15.0" layoutY="268.0" prefHeight="23.0" prefWidth="87.0" text="Raf Numarası">
+                                                            <font>
+                                                                <Font name="Gabriola" size="18.0" />
+                                                            </font>
+                                                        </Label>
+                                                        <Label layoutX="15.0" layoutY="310.0" prefHeight="18.0" prefWidth="54.0" text="Konu">
+                                                            <font>
+                                                                <Font name="Gabriola" size="18.0" />
+                                                            </font>
+                                                        </Label>
+                                                        <Label layoutX="15.0" layoutY="445.0" text="Stok Durumu">
+                                                            <font>
+                                                                <Font name="Gabriola" size="18.0" />
+                                                            </font>
+                                                        </Label>
+                                                    </children>
+                                                </AnchorPane>
+                                            </content>
+                                        </ScrollPane>
+                                    </children>
+                                </Pane>
+                                <JFXButton layoutX="14.0" layoutY="397.0" onAction="#kitapEkleEvent" prefHeight="31.0" prefWidth="118.0" style="-fx-background-color: #4B0082;" text="Ekle" textFill="WHITE">
+                                    <font>
+                                        <Font name="Gabriola" size="18.0" />
+                                    </font></JFXButton>
+                                <Label layoutX="468.0" layoutY="14.0" prefHeight="38.0" prefWidth="172.0" text="Kitap Bilgileri" textFill="INDIGO">
+                                    <font>
+                                        <Font name="Gabriola" size="24.0" />
+                                    </font>
+                                </Label>
+                                <TableView fx:id="kitaplarListBox" layoutX="14.0" layoutY="14.0" prefHeight="368.0" prefWidth="442.0" style="-fx-background-color: #4B0082;">
+                                    <columns>
+                                        <TableColumn fx:id="kitap_adi" prefWidth="104.0" text="Kitap Adı" />
+                                        <TableColumn fx:id="yazar" prefWidth="66.39996337890625" text="Yazar" />
+                                        <TableColumn fx:id="yayinevi" prefWidth="97.60003662109375" text="Yayınevi" />
+                                        <TableColumn fx:id="raf_no" prefWidth="84.0" text="Raf Numarası" />
+                                        <TableColumn fx:id="stok_durumu" prefWidth="92.0" text="Stok Durumu" />
+                                    </columns>
+                                </TableView>
+                                <TableView fx:id="silmeListBox" layoutX="14.0" layoutY="14.0" prefHeight="368.0" prefWidth="442.0" visible="false">
+                                    <columns>
+                                        <TableColumn fx:id="kitap_adi1" prefWidth="104.0" text="Kitap Adı" />
+                                        <TableColumn fx:id="yazar1" prefWidth="83.20001220703125" text="Yazar" />
+                                        <TableColumn fx:id="yayinevi1" text="Yayınevi" />
+                                        <TableColumn fx:id="raf_no1" prefWidth="91.20001220703125" text="Raf Numarası" />
+                                        <TableColumn fx:id="stok_durumu1" prefWidth="83.99993896484375" text="Stok Durumu" />
+                                    </columns>
+                                </TableView>
+                            </children>
+                        </AnchorPane>
+                    </content>
+                </Tab>
+                <Tab text="Kullanıcılar">
+                    <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-background-color: snow;">
+                            <children>
+                                <TableView fx:id="kullanıcıListBox" layoutX="6.0" layoutY="33.0" prefHeight="406.0" prefWidth="859.0" style="-fx-background-color: #4B0082;">
+                                    <columns>
+                                        <TableColumn fx:id="kullaniciAdi" prefWidth="172.80001831054688" text="Adı" />
+                                        <TableColumn fx:id="kullaniciSoyadi" minWidth="0.0" prefWidth="182.39999389648438" text="Soyadı" />
+                                        <TableColumn fx:id="kullaniciEposta" prefWidth="235.20001220703125" text="E-posta" />
+                                        <TableColumn fx:id="kullaniciSifre" prefWidth="174.40008544921875" text="Şifre" />
+                                        <TableColumn fx:id="kullaniciRol" prefWidth="95.199951171875" text="Rol" />
+                                    </columns>
+                                </TableView>
+                            </children>
+                        </AnchorPane>
+                    </content>
+                </Tab>
+            </tabs>
+        </TabPane>
+    </children>
+</AnchorPane>
